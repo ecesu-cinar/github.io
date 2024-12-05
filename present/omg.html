@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OMG!!</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="omg">
+        <h1>HELLO SINA!!</h1>
+        <h2>I am sorry if the site sucks I didn't code in HTML or CSS in ages (lie) </h2>
+        <h2>I am so glad you came!!</h2>
+        <h2>Ah... But...</h2>
+        <h2>How can I be sure that it's the Sina I want and not some other Sina?</h2>
+        <h2>I guess the only way to find out is to do a.....</h2>
+        <button id="learn-btn" type="button" onclick="showQuiz()">Learn the solution</button>
+    </section>
+
+    <script>
+        function showQuiz() {
+            // Disable the button to prevent multiple clicks
+            var learnBtn = document.getElementById('learn-btn');
+            learnBtn.disabled = true;
+            learnBtn.textContent = "Loading..."; // Change text to show loading state
+
+            // Create the quiz content
+            var quizDiv = document.createElement('div');
+            quizDiv.classList.add('quiz');
+
+            var quizTitle = document.createElement('h1');
+            quizTitle.textContent = 'QUIIIIZZZZ!!!';
+
+            var startButton = document.createElement('button');
+            startButton.textContent = 'Start the Quiz';
+
+            startButton.onclick = function() {
+                window.location.href = 'quiz.html';
+            };
+
+            quizDiv.appendChild(quizTitle);
+            quizDiv.appendChild(startButton);
+
+            document.querySelector('.omg').appendChild(quizDiv);
+        }
+    </script>
+
+</body>
+</html>

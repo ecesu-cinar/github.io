@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="all.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <section class="quiz-section">
+        <h2>Even though I told you there will be a quiz at the end it is just 2 questions because I couldn't think of more :((</h2>
+    
+        <!-- Question 1 -->
+        <h2>Question 1: The date we began dating</h2>
+        <div class="q1">
+            <button type="button" onclick="selectAnswer(this, 'question1', '19')">19/05/22</button>
+            <button type="button" onclick="selectAnswer(this, 'question1', '20')">20/05/22</button>
+            <button type="button" onclick="selectAnswer(this, 'question1', '29')">29/10/22</button>
+        </div>
+    
+        <!-- Question 2 -->
+        <h2>Question 2: What is the name of the last book you read?</h2>
+        <div class="q2">
+            <button type="button" onclick="selectAnswer(this, 'question2', 'B')">Bilinmeyen Bir Kadının Mektubu</button>
+            <button type="button" onclick="selectAnswer(this, 'question2', 'P')">Prens</button>
+            <button type="button" onclick="selectAnswer(this, 'question2', 'K')">Kitap?</button>
+        </div>
+    
+        <div class="sub">
+            <button type="button" onclick="submitQuiz()">Submit Quiz!</button>
+        </div>
+    </section>
+    
+    <script>
+        var answers = {
+            question1: null,
+            question2: null
+        };
+    
+        function selectAnswer(button, question, answer) {
+            // Remove 'pressed' class from all buttons in the question's group
+            document.querySelectorAll(`.q${question[question.length - 1]} button`).forEach(btn => btn.classList.remove('pressed'));
+            
+            // Add 'pressed' class to the clicked button
+            button.classList.add('pressed');
+    
+            // Record the selected answer
+            answers[question] = answer;
+        }
+    
+        function submitQuiz() {
+            var correctAnswers = {
+                question1: '20',
+                question2: 'K'
+            };
+    
+            if (answers.question1 === correctAnswers.question1 &&
+                answers.question2 === correctAnswers.question2) {
+                
+                window.location.href = 'succ.html'; // Redirect to success page
+            } else {
+                window.location.href = 'fail.html'; // Redirect to failure page
+            }
+        }
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: #5A639C;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.Welcome{
+    padding: 50px;
+}
+
+h1 {
+    font-size: 46px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+button {
+    background-color: #E2BBE9; 
+    color: #5A639C; 
+    border: none;
+    padding:20px;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center; 
+    width: 290px; 
+    text-align: center; 
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover:not(:disabled) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 0 15px #E2BBE9;
+    transform: translateY(-1px); 
+}
+
+.icon {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.icon a {
+    color: #E2BBE9; 
+    font-size: 40px; 
+    transition: transform 0.3s ease, color 0.3s ease; 
+}
+
+.icon a:hover {
+    transform: translateY(-5px);  
+}
+
+.icon a:active {
+    transform: translateY(0); 
+}
+
+button:disabled {
+    background-color: #5A639C;
+    color: #5A639C;
+    cursor: default; 
+}
+
+.q2 {
+    display: flex; 
+    gap: 10px;
+    justify-content: center;
+}
+
+.q2 button{
+    height: 80px; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding: 10px;
+    box-sizing: border-box; 
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+.sub{
+    padding: 30px;
+}
+
+button.pressed {
+    background-color: #C78CD0; /* Highlight the button */
+    color: white; /* Text color for pressed buttons */
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3); /* Pressed effect */
+    transform: translateY(2px); /* Slight push down */
+}
