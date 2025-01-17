@@ -29,7 +29,7 @@ This project has been a valuable learning experience. While working on it, I rec
 ---
 
 ### Live Demo:
-You can view the website here: [Live Demo](https://ecesu-cinar.github.io/github.io/)
+You can view the website here: [Website](https://ecesu-cinar.github.io/github.io/)
 
 ---
 
